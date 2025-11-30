@@ -1,0 +1,57 @@
+import 'package:find_job/utils/colors.dart';
+import 'package:flutter/material.dart';
+
+class Tabs extends StatefulWidget {
+  Tabs({super.key});
+
+  @override
+  State<Tabs> createState() => _TabsState();
+}
+
+class _TabsState extends State<Tabs> {
+  final List<String> tabs = ['Product', 'Design', 'Development'];
+  int selectedIndex = 0;
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children:
+          tabs.asMap().entries.map((entry) {
+            final title = entry.value;
+            final index = entry.key;
+            final isSelected = index == selectedIndex;
+
+            return GestureDetector(
+              onTap: () {
+                setState(() {
+                  selectedIndex = index;
+                });
+              },
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 3),
+                margin: EdgeInsets.only(right: 10),
+                decoration: BoxDecoration(
+                  color:
+                      isSelected ? AppColors.mainColor : AppColors.whiteColor,
+                  border: Border.all(
+                    color:
+                        isSelected ? AppColors.mainColor : Colors.grey.shade300,
+                  ),
+                  borderRadius: BorderRadius.circular(14),
+                ),
+
+                child: Text(
+                  '${title}',
+                  style: TextStyle(
+                    fontSize: 14,
+                    color:
+                        isSelected
+                            ? AppColors.whiteColor
+                            : Colors.grey.shade400,
+                  ),
+                ),
+              ),
+            );
+          }).toList(),
+    );
+  }
+}
