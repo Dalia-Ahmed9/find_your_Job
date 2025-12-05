@@ -14,7 +14,7 @@ class MainButton extends StatelessWidget {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(15.0),
+        padding: const EdgeInsets.all(17.0),
         child: Center(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -22,10 +22,10 @@ class MainButton extends StatelessWidget {
               Text(
                 text,
                 style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
+                  fontSize: 17,
+                  // fontWeight: FontWeight.bold,
                   color: AppColors.whiteColor,
-                  fontFamily: 'second_font',
+                  fontFamily: 'main_font',
                 ),
               ),
               SizedBox(width: 15),

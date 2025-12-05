@@ -22,9 +22,9 @@ class _CategoryFilterState extends State<CategoryFilter> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const SizedBox(height: 30),
+            // const SizedBox(height: 30),
             DropdownButtonFormField2<String>(
-              isExpanded: true,
+              //isExpanded: true,
               decoration: InputDecoration(
                 // Add Horizontal padding using menuItemStyleData.padding so it matches
                 // the menu padding when button's width is not specified.
@@ -87,7 +87,7 @@ class _CategoryFilterState extends State<CategoryFilter> {
                 padding: EdgeInsets.symmetric(horizontal: 16),
               ),
             ),
-            const SizedBox(height: 30),
+            // const SizedBox(height: 30),
           ],
         ),
       ),
