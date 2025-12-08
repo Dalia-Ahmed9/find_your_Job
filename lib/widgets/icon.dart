@@ -1,17 +1,25 @@
 import 'package:find_job/utils/colors.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 
 class ReusedIcon extends StatelessWidget {
-  const ReusedIcon({super.key, required this.icon});
+  const ReusedIcon({
+    super.key,
+    required this.icon,
+    required this.height,
+    required this.width,
+  });
   final Widget icon;
+  final double height;
+  final double width;
+  final bool isgrey = false;
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 40,
-      width: 40,
+      height: height,
+      width: width,
       child: icon,
       decoration: BoxDecoration(
-        color: AppColors.greyColor,
+        color: isgrey ? AppColors.greyColor : Colors.grey.shade200,
         borderRadius: BorderRadius.circular(10),
       ),
     );

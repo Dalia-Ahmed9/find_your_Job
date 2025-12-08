@@ -1,6 +1,7 @@
 import 'package:find_job/control/auth_Cubit/auth_Cubit.dart';
 import 'package:find_job/firebase_options.dart';
-import 'package:find_job/view/setting_filtters/filters_contents.dart';
+import 'package:find_job/utils/colors.dart';
+import 'package:find_job/view/job_details/job_details.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -36,8 +37,20 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       child: MaterialApp(
+        theme: ThemeData(
+          scaffoldBackgroundColor: AppColors.greyColor,
+          appBarTheme: AppBarThemeData(
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+            iconTheme: IconThemeData(color: Colors.black),
+            systemOverlayStyle: SystemUiOverlayStyle(
+              statusBarColor: Colors.transparent,
+              statusBarIconBrightness: Brightness.dark,
+            ),
+          ),
+        ),
         debugShowCheckedModeBanner: false,
-        home: FiltersContents(),
+        home: JobDetails(),
       ),
     );
   }

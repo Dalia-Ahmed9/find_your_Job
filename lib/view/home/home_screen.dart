@@ -31,8 +31,13 @@ class HomeScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  ReusedIcon(icon: Icon(Icons.menu)),
-                  ContainerOfImage(imagePath: 'asset/images/profile.jpg'),
+                  ReusedIcon(icon: Icon(Icons.menu), height: 40, width: 40),
+                  ContainerOfImage(
+                    height: 60,
+                    width: 60,
+                    imagePath: 'asset/images/profile.jpg',
+                    iswhite: false,
+                  ),
                 ],
               ),
               SizedBox(height: 10),

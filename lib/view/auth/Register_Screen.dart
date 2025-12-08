@@ -58,7 +58,11 @@ class RegisterScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    ReusedIcon(icon: Icon(Icons.arrow_back)),
+                    ReusedIcon(
+                      icon: Icon(Icons.arrow_back),
+                      height: 40,
+                      width: 40,
+                    ),
                     SizedBox(height: 50),
                     texts(text: 'Register Account', size: 20, mainfont: true),
                     SizedBox(height: 10),

@@ -1,15 +1,15 @@
 import 'package:find_job/utils/colors.dart';
 import 'package:flutter/material.dart';
 
-class Tabs extends StatefulWidget {
-  Tabs({super.key});
+class JobTabs extends StatefulWidget {
+  JobTabs({super.key});
 
   @override
-  State<Tabs> createState() => _TabsState();
+  State<JobTabs> createState() => _JobTabsState();
 }
 
-class _TabsState extends State<Tabs> {
-  final List<String> tabs = ['Product', 'Design', 'Development'];
+class _JobTabsState extends State<JobTabs> {
+  final List<String> tabs = ['Description', 'Company', 'Reviews'];
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
@@ -27,10 +27,10 @@ class _TabsState extends State<Tabs> {
                 });
               },
               child: Container(
-                height: 50,
-                width: MediaQuery.sizeOf(context).width / 3.7,
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 3),
-                margin: EdgeInsets.only(right: 10),
+                height: 45,
+                width: MediaQuery.sizeOf(context).width / 3.6,
+                padding: EdgeInsets.symmetric(horizontal: 10),
+                margin: EdgeInsets.symmetric(horizontal: 5),
                 decoration: BoxDecoration(
                   color:
                       isSelected ? AppColors.mainColor : AppColors.whiteColor,
@@ -41,14 +41,16 @@ class _TabsState extends State<Tabs> {
                   borderRadius: BorderRadius.circular(14),
                 ),
 
-                child: Text(
-                  '${title}',
-                  style: TextStyle(
-                    fontSize: 14,
-                    color:
-                        isSelected
-                            ? AppColors.whiteColor
-                            : Colors.grey.shade400,
+                child: Center(
+                  child: Text(
+                    '${title}',
+                    style: TextStyle(
+                      fontSize: 14,
+                      color:
+                          isSelected
+                              ? AppColors.whiteColor
+                              : Colors.grey.shade400,
+                    ),
                   ),
                 ),
               ),
