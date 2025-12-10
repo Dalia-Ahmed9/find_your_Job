@@ -1,12 +1,13 @@
 import 'package:find_job/control/auth_Cubit/auth_Cubit.dart';
 import 'package:find_job/firebase_options.dart';
 import 'package:find_job/utils/colors.dart';
-import 'package:find_job/view/job_details/job_details.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import 'view/job_details/job_details.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

@@ -27,9 +27,9 @@ class _TabsState extends State<Tabs> {
                 });
               },
               child: Container(
-                height: 50,
-                width: MediaQuery.sizeOf(context).width / 3.7,
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 3),
+                height: 40,
+                width: MediaQuery.sizeOf(context).width / 3.6,
+                padding: EdgeInsets.symmetric(horizontal: 9),
                 margin: EdgeInsets.only(right: 10),
                 decoration: BoxDecoration(
                   color:
@@ -41,14 +41,16 @@ class _TabsState extends State<Tabs> {
                   borderRadius: BorderRadius.circular(14),
                 ),
 
-                child: Text(
-                  '${title}',
-                  style: TextStyle(
-                    fontSize: 14,
-                    color:
-                        isSelected
-                            ? AppColors.whiteColor
-                            : Colors.grey.shade400,
+                child: Center(
+                  child: Text(
+                    '${title}',
+                    style: TextStyle(
+                      fontSize: 14,
+                      color:
+                          isSelected
+                              ? AppColors.whiteColor
+                              : Colors.grey.shade400,
+                    ),
                   ),
                 ),
               ),

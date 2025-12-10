@@ -38,6 +38,10 @@ dependencies:
     sdk: flutter
   flutter_bloc: ^9.1.1
   flutter_screenutil: ^5.9.3
+  just_audio: ^0.10.5
+  path_provider: ^2.1.5
+  permission_handler: ^12.0.1
+  record: ^6.1.2
   shimmer: ^3.0.0
 
 dev_dependencies:
